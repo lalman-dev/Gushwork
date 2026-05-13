@@ -185,8 +185,6 @@ Frontend implementation and interactions developed using HTML, CSS, and JavaScri
 
 Frontend Developer focused on building polished, responsive, and production-quality user experiences.
 
-- LinkedIn: linkedin.com/in/lalman-dev
+- LinkedIn: www.linkedin.com/in/lalman-dev
 - Portfolio: www.lalman.dev
-- GitHub: github.com/lalman-dev
-
-> Replace placeholder links with actual URLs.
+- GitHub: www.github.com/lalman-dev
