@@ -142,3 +142,57 @@ catalogForm.addEventListener("submit", (e) => {
   closeModal();
   catalogForm.reset();
 });
+
+// GLOBAL MODAL
+const globalModal = document.getElementById("global-modal");
+const globalOverlay = document.querySelector(".global-overlay");
+const closeGlobalModalBtn = document.querySelector(".close-global-modal");
+const modalTitle = document.getElementById("modal-title");
+
+// BUTTONS
+const contactBtn = document.getElementById("contact-btn");
+const quoteBtn = document.getElementById("quote-btn");
+const quoteActionBtn = document.getElementById("quote-action-btn");
+
+// OPEN MODAL
+function openGlobalModal(title) {
+  modalTitle.textContent = title;
+  globalModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+// CLOSE MODAL
+function closeGlobalModal() {
+  globalModal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+contactBtn.addEventListener("click", () => {
+  openGlobalModal("Contact Our Team");
+});
+quoteBtn.addEventListener("click", () => {
+  openGlobalModal("Request Custom Quote");
+});
+quoteActionBtn.addEventListener("click", () => {
+  openGlobalModal("Request Project Quote");
+});
+closeGlobalModalBtn.addEventListener("click", closeGlobalModal);
+globalOverlay.addEventListener("click", closeGlobalModal);
+
+// TECHNICAL SPECS SCROLL
+const specsBtn = document.getElementById("specs-btn");
+const specsSection = document.getElementById("technical-specs");
+specsBtn.addEventListener("click", () => {
+  specsSection.scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+// DOWNLOAD TOAST
+const downloadBtn = document.getElementById("download-btn");
+const toast = document.getElementById("toast");
+downloadBtn.addEventListener("click", () => {
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+});
