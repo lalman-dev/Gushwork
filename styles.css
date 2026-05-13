@@ -1274,3 +1274,145 @@ body {
     font-size: 28px;
   }
 }
+
+/* APPLICATIONS SECTION */
+
+.applications-section {
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.applications-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.applications-heading h2 {
+  font-size: 54px;
+  line-height: 1.05;
+  max-width: 620px;
+  margin-bottom: 18px;
+}
+
+.applications-heading p {
+  max-width: 620px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.applications-arrows {
+  display: flex;
+  gap: 14px;
+}
+
+.applications-arrows button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  background: white;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.applications-arrows button:hover {
+  transform: translateY(-2px);
+  background: #f3f4f6;
+}
+
+.industry-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.industry-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scrollIndustries 28s linear infinite;
+}
+
+.industry-slider:hover .industry-track {
+  animation-play-state: paused;
+}
+
+.industry-card {
+  width: 320px;
+  height: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.industry-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.industry-card:hover img {
+  transform: scale(1.08);
+}
+
+.industry-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.1));
+}
+
+.industry-content {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2;
+  color: white;
+}
+
+.industry-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.industry-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@keyframes scrollIndustries {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .applications-section {
+    padding: 80px 0;
+  }
+
+  .applications-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .applications-heading h2 {
+    font-size: 38px;
+  }
+
+  .industry-card {
+    width: 260px;
+    height: 360px;
+  }
+}

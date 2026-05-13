@@ -196,3 +196,24 @@ downloadBtn.addEventListener("click", () => {
     toast.classList.remove("show");
   }, 3000);
 });
+
+// INDUSTRY SLIDER CONTROLS
+
+const industryTrack = document.querySelector(".industry-track");
+const prevIndustry = document.querySelector(".industry-prev");
+const nextIndustry = document.querySelector(".industry-next");
+
+nextIndustry.addEventListener("click", () => {
+  industryTrack.style.animationPlayState = "paused";
+  industryTrack.scrollBy({
+    left: 340,
+    behavior: "smooth",
+  });
+});
+prevIndustry.addEventListener("click", () => {
+  industryTrack.style.animationPlayState = "paused";
+  industryTrack.scrollBy({
+    left: -340,
+    behavior: "smooth",
+  });
+});
