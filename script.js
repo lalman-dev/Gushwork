@@ -217,3 +217,161 @@ prevIndustry.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// PROCESS INTERACTION
+
+const processData = [
+  {
+    step: "Step 01",
+    title: "High-Grade Raw Material Selection",
+    description:
+      "Premium PE100 raw materials are selected to ensure superior durability and infrastructure reliability.",
+
+    points: [
+      "PE100 grade material",
+      "Optimal molecular weight distribution",
+      "Consistent wall thickness",
+    ],
+
+    image: "./assets/images/process-1.png",
+  },
+
+  {
+    step: "Step 02",
+    title: "Precision Extrusion Technology",
+    description:
+      "Advanced extrusion systems maintain dimensional consistency and high-pressure tolerance.",
+
+    points: [
+      "Uniform extrusion pressure",
+      "Advanced heating control",
+      "Smooth pipe finish",
+    ],
+
+    image: "./assets/images/process-2.png",
+  },
+
+  {
+    step: "Step 03",
+    title: "Controlled Cooling Process",
+    description:
+      "Optimized cooling chambers ensure structural integrity and dimensional accuracy.",
+
+    points: [
+      "Temperature monitoring",
+      "Dimensional stability",
+      "Improved durability",
+    ],
+
+    image: "./assets/images/process-3.png",
+  },
+
+  {
+    step: "Step 04",
+    title: "Accurate Pipe Sizing",
+    description:
+      "Vacuum sizing tanks ensure precise outer diameters and wall uniformity.",
+
+    points: [
+      "Precise calibration",
+      "Wall thickness control",
+      "Roundness accuracy",
+    ],
+
+    image: "./assets/images/process-4.png",
+  },
+
+  {
+    step: "Step 05",
+    title: "Comprehensive Quality Testing",
+    description:
+      "Every batch undergoes pressure, durability, and dimensional quality checks.",
+
+    points: [
+      "Pressure testing",
+      "Material inspection",
+      "Long-term durability validation",
+    ],
+
+    image: "./assets/images/process-5.png",
+  },
+
+  {
+    step: "Step 06",
+    title: "Pipe Marking & Traceability",
+    description:
+      "Automated marking systems ensure traceability and compliance standards.",
+
+    points: ["Batch coding", "Certification marking", "Compliance tracking"],
+
+    image: "./assets/images/process-6.png",
+  },
+
+  {
+    step: "Step 07",
+    title: "Secure Packaging & Dispatch",
+    description:
+      "Finished products are packaged securely for safe transportation and delivery.",
+
+    points: [
+      "Damage protection",
+      "Efficient logistics",
+      "Export-ready packaging",
+    ],
+
+    image: "./assets/images/process-7.png",
+  },
+];
+
+const processTabs = document.querySelectorAll(".process-tab");
+
+const processBadge = document.querySelector(".process-badge");
+const processTitle = document.querySelector(".process-title");
+const processDescription = document.querySelector(".process-description");
+const processPoints = document.querySelector(".process-points");
+const processImage = document.querySelector("#process-image");
+
+function updateProcess(index) {
+  const item = processData[index];
+
+  processBadge.textContent = item.step;
+  processTitle.textContent = item.title;
+  processDescription.textContent = item.description;
+
+  processImage.style.opacity = 0;
+
+  setTimeout(() => {
+    processImage.src = item.image;
+    processImage.style.opacity = 1;
+  }, 200);
+
+  processPoints.innerHTML = item.points
+    .map((point) => `<li>${point}</li>`)
+    .join("");
+
+  processTabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  processTabs[index].classList.add("active");
+}
+
+processTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    updateProcess(tab.dataset.step);
+  });
+});
+
+// AUTO PLAY
+
+let processIndex = 0;
+
+setInterval(() => {
+  processIndex++;
+
+  if (processIndex >= processData.length) {
+    processIndex = 0;
+  }
+
+  updateProcess(processIndex);
+}, 5000);
