@@ -839,3 +839,280 @@ body {
     transform: translateY(0);
   }
 }
+
+/* FAQ SECTION */
+
+.faq-section {
+  padding: 120px 0;
+}
+
+.faq-heading {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.faq-heading h2 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+.faq-heading h2 span {
+  color: #2b3990;
+}
+
+.faq-heading p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active {
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.faq-question {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 26px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  text-align: left;
+}
+
+.faq-question i {
+  color: #2b3990;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 0 30px 28px;
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+/* CATALOG BOX */
+
+.catalog-box {
+  margin-top: 42px;
+  padding: 34px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.catalog-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.catalog-content p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.catalog-btn {
+  border: none;
+  background: #2b3990;
+  color: white;
+  height: 54px;
+  padding-inline: 34px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.catalog-btn:hover {
+  transform: translateY(-2px);
+  background: #243082;
+}
+
+/* MODAL */
+
+.catalog-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-modal.active {
+  display: flex;
+}
+
+.catalog-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.catalog-modal-content {
+  position: relative;
+  width: min(92%, 520px);
+  background: white;
+  border-radius: 28px;
+  padding: 42px;
+  z-index: 2;
+  animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: rgba(17, 24, 39, 0.06);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.catalog-modal-content h3 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: #111827;
+}
+
+.catalog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input {
+  height: 56px;
+  border-radius: 14px;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  padding-inline: 18px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #2b3990;
+}
+
+.submit-btn {
+  height: 58px;
+  border: none;
+  border-radius: 16px;
+  background: #2b3990;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 90px 0;
+  }
+
+  .faq-heading h2 {
+    font-size: 38px;
+  }
+
+  .faq-question {
+    padding: 22px;
+    font-size: 15px;
+  }
+
+  .faq-answer p {
+    padding: 0 22px 22px;
+  }
+
+  .catalog-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catalog-btn {
+    width: 100%;
+  }
+
+  .catalog-modal-content {
+    padding: 32px 24px;
+  }
+
+  .catalog-modal-content h3 {
+    font-size: 28px;
+  }
+}

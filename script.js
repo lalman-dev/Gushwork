@@ -98,3 +98,47 @@ imageWrapper.addEventListener("mouseleave", () => {
 // INIT
 updateGallery();
 startAutoSlide();
+
+// FAQ ACCORDION
+const faqItems = document.querySelectorAll(".faq-item");
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  question.addEventListener("click", () => {
+    const isActive = item.classList.contains("active");
+    faqItems.forEach((faq) => {
+      faq.classList.remove("active");
+    });
+    if (!isActive) {
+      item.classList.add("active");
+    }
+  });
+});
+
+// FAQ MODAL
+const openModalBtn = document.getElementById("open-catalog-modal");
+const closeModalBtn = document.getElementById("close-modal");
+const catalogModal = document.getElementById("catalog-modal");
+const modalOverlay = document.querySelector(".catalog-overlay");
+
+// OPEN MODAL
+openModalBtn.addEventListener("click", () => {
+  catalogModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+});
+
+// CLOSE MODAL
+function closeModal() {
+  catalogModal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+closeModalBtn.addEventListener("click", closeModal);
+modalOverlay.addEventListener("click", closeModal);
+
+// FORM SUBMIT
+const catalogForm = document.querySelector(".catalog-form");
+catalogForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Catalogue request submitted successfully!");
+  closeModal();
+  catalogForm.reset();
+});
