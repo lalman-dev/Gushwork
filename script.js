@@ -375,3 +375,21 @@ setInterval(() => {
 
   updateProcess(processIndex);
 }, 5000);
+
+// PORTFOLIO BUTTONS
+
+const portfolioButtons = document.querySelectorAll(".portfolio-btn");
+
+portfolioButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert("Detailed product information page coming soon.");
+  });
+});
+
+// EXPERT BUTTON
+
+const expertBtn = document.querySelector(".expert-btn");
+
+expertBtn.addEventListener("click", () => {
+  openModal();
+});
