@@ -8,7 +8,7 @@ This project focuses on clean UI implementation, responsive layouts, smooth inte
 
 ## Live Demo
 
-[Live Preview](#)
+[Live Preview](https://gushwork-theta.vercel.app/)
 
 ---
 
@@ -47,46 +47,58 @@ The project includes:
 ## Features
 
 ### Responsive Navigation
+
 - Sticky glassmorphism navbar
 - Mobile hamburger menu
 - Smooth responsive transitions
 
 ### Hero Product Showcase
+
 - Interactive image carousel
 - Auto-sliding gallery
 - Thumbnail switching
 - Hover zoom animation
 
 ### Interactive CTA Buttons
+
 Buttons across the website trigger real actions instead of placeholder links:
+
 - Open reusable modal
 - Scroll to sections
 - Trigger notifications
 - Submit forms
 
 ### FAQ Accordion
+
 - Expand/collapse interaction
 - Smooth transitions
 - One-click toggles
 
 ### Infinite Marquee Sections
+
 - Smooth continuously scrolling company logos
 - Testimonial marquee animation
 
 ### Reusable Modal System
+
 Global modal used for:
+
 - Contact requests
 - Quote requests
 - Expert consultation
 
 ### Toast Notification System
+
 Used for:
+
 - Form submissions
 - Resource downloads
 - CTA feedback
 
 ### Fully Responsive
+
 Optimized for:
+
 - Desktop
 - Tablet
 - Mobile devices
@@ -135,6 +147,7 @@ Run using Live Server or open `index.html` directly in browser.
 The project follows a clean component-based structure even though it is built using vanilla technologies.
 
 Special focus was given to:
+
 - spacing consistency
 - typography hierarchy
 - realistic hover states
@@ -148,6 +161,7 @@ Special focus was given to:
 ## Future Improvements
 
 Potential enhancements:
+
 - Backend form integration
 - API-powered product data
 - Dark mode support
@@ -162,6 +176,7 @@ Potential enhancements:
 ## Performance & UX Focus
 
 The implementation prioritizes:
+
 - fast loading
 - smooth animations
 - responsive layouts
