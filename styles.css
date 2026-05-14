@@ -1893,6 +1893,100 @@ body {
   }
 }
 
+/* RESOURCES SECTION */
+
+.resources-section {
+  padding: 100px 0;
+}
+
+.resources-heading {
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 54px;
+}
+
+.resources-heading h2 {
+  font-size: 54px;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.resources-heading p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+.resources-box {
+  background: white;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.resource-item {
+  padding: 28px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+.resource-item span {
+  font-size: 16px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.resource-download-btn {
+  border: none;
+  background: transparent;
+  color: #2b3990;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.resource-download-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .resources-section {
+    padding: 70px 0;
+  }
+
+  .resources-heading h2 {
+    font-size: 38px;
+  }
+
+  .resources-heading p {
+    font-size: 16px;
+  }
+
+  .resource-item {
+    padding: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* CTA SECTION */
 
 .cta-section {

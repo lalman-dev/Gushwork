@@ -394,6 +394,16 @@ expertBtn.addEventListener("click", () => {
   openModal();
 });
 
+// RESOURCE DOWNLOADS
+
+const resourceButtons = document.querySelectorAll(".resource-download-btn");
+
+resourceButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    showToast("Download started successfully");
+  });
+});
+
 // CTA FORM
 
 const ctaForm = document.getElementById("ctaForm");
