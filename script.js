@@ -394,6 +394,18 @@ expertBtn.addEventListener("click", () => {
   openModal();
 });
 
+// CTA FORM
+
+const ctaForm = document.getElementById("ctaForm");
+
+ctaForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  showToast("Quote request submitted successfully");
+
+  ctaForm.reset();
+});
+
 // FOOTER LINKS
 
 const footerLinks = document.querySelectorAll(".footer-column a");

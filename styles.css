@@ -1893,6 +1893,163 @@ body {
   }
 }
 
+/* CTA SECTION */
+
+.cta-section {
+  padding: 100px 0;
+}
+
+.cta-box {
+  background: #2b3990;
+  border-radius: 36px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cta-content h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+.cta-content p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 36px;
+  max-width: 720px;
+}
+
+.cta-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  margin-bottom: 26px;
+}
+
+.cta-content span {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.cta-content span a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-form-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-form {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 28px;
+  padding: 32px;
+}
+
+.cta-form h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  height: 58px;
+  border-radius: 14px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  padding-inline: 18px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.cta-form input:focus,
+.cta-form select:focus {
+  border-color: #2b3990;
+}
+
+.phone-group {
+  display: flex;
+  gap: 12px;
+}
+
+.phone-group select {
+  width: 100px;
+}
+
+.cta-form button {
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 14px;
+  background: #1f2937;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.cta-form button:hover {
+  transform: translateY(-2px);
+  background: #111827;
+}
+
+/* RESPONSIVE CTA */
+
+@media (max-width: 1100px) {
+  .cta-box {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-form-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 0;
+  }
+
+  .cta-box {
+    padding: 28px;
+    border-radius: 26px;
+    gap: 36px;
+  }
+
+  .cta-content h2 {
+    font-size: 42px;
+  }
+
+  .cta-content p {
+    font-size: 17px;
+  }
+
+  .cta-form {
+    padding: 24px;
+  }
+}
+
 /* FOOTER */
 
 .site-footer {
