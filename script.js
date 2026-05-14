@@ -393,3 +393,15 @@ const expertBtn = document.querySelector(".expert-btn");
 expertBtn.addEventListener("click", () => {
   openModal();
 });
+
+// FOOTER LINKS
+
+const footerLinks = document.querySelectorAll(".footer-column a");
+
+footerLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    showToast("Section coming soon");
+  });
+});
